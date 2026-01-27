@@ -1,7 +1,7 @@
 ---
 cssclasses:
 ---
-# Cat MineStar Fleet Assignment Engine Logic
+# Cat MineStar, DISPATCH, HEXAGON Fleet Assignment Engine Logic
 
 The sources provide a deep and consistent look into the operation and assignment functionality of the **Cat MineStar System Fleet** (referred to generally as Fleet, or specifically using terms like **DISPATCH** and **Joptimizer**), positioning it as an integrated, complex system designed to maximize mine productivity and minimize cost through automated, real-time decision-making [1-7].
 
