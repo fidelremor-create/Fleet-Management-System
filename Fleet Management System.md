@@ -59,7 +59,7 @@ In short, the success of the Cat MineStar System/DISPATCH is a function of its s
 
 --------------------------------------------------------------------------------
 
-Mine Haulage Optimization Logic and Inputs
+## Mine Haulage Optimization Logic and Inputs
 
 The **Assignment Engine Logic and Inputs** form the core of the Cat MineStar System Fleet (and Modular Mining's DISPATCH/Leica's Joptimizer solutions), driving automated decisions that aim to maximize production and minimize operating costs by optimizing haul truck assignments [1-4]. The system's effectiveness hinges entirely on the quality and accuracy of the inputs it receives, as inaccurate data leads to suboptimal assignments, queuing, idle equipment, misdirected loads, and higher costs per ton [5-9].
 
@@ -137,7 +137,7 @@ The quality of these inputs is the **foundation of optimization** [5, 6, 8]. C
 
 --------------------------------------------------------------------------------
 
-Mine Fleet Management System Assignment Logic
+## Mine Fleet Management System Assignment Logic
 
 The sources provide a clear and consistent definition of what an assignment is within the context of mine fleet management systems (DISPATCH, Cat MineStar Fleet, or Joptimizer), emphasizing its function as the primary output of the Assignment Engine Logic, which relies heavily on comprehensive data inputs.
 
@@ -193,7 +193,7 @@ Manual assignments must be used sparingly because they **disrupt the DP logic a
 
 --------------------------------------------------------------------------------
 
-Haul Truck Assignment Logic and Optimization
+## Haul Truck Assignment Logic and Optimization
 
 The question "Where Will Assignments Send Me?" is answered by understanding the primary objective of the Assignment Engine (which encompasses the Linear Programming/LP and Dynamic Assignment/DP layers) and the numerous data inputs and configurations that determine the optimal destination for a haul truck.
 
@@ -267,7 +267,7 @@ Key inputs and configurations directly impacting where a truck is sent include:
 
 --------------------------------------------------------------------------------
 
-Automated and Manual Truck Assignment Logic
+## Automated and Manual Truck Assignment Logic
 
 The sources classify truck assignments into two main categories: **Automatic Truck Assignments** (the preferred mode of operation for optimization) and **Manual Truck Assignments** (used for intervention and control), with further differentiation based on timing and triggers. These assignments are the primary output of the Assignment Engine Logic, which draws on vast amounts of data inputs.
 
@@ -339,7 +339,7 @@ The existence of these different assignment types and triggers demonstrates how 
 
 --------------------------------------------------------------------------------
 
-Dynamic Mining Assignment Logic and Triggers
+## Dynamic Mining Assignment Logic and Triggers
 
 The fundamental goal of the assignment engine (Dynamic Programming/Dynamic Assignment, or DP/DA) is to maximize mine productivity and minimize cost by continuously calculating and issuing instructions (assignments) to trucks, dictating where they should travel next [1], [2].
 
@@ -381,7 +381,7 @@ D. User-Initiated Triggers (Manual Requests):
 
 --------------------------------------------------------------------------------
 
-II. Assignment Engine Logic & Inputs (How the Decision is Made)
+## II. Assignment Engine Logic & Inputs (How the Decision is Made)
 
 When a trigger occurs, the Dynamic Assignment (DA) layer executes a rapid, real-time process to determine the specific assignment based on the overall strategy set by the Linear Programming (LP) layer [2], [13], [35], [36]. The overall goal is to maximize production by minimizing the components of the haul cycle, leading to cost minimization [1], [37].
 
@@ -423,7 +423,7 @@ When a loaded truck requests a dump assignment, the system first checks for pre-
 
 --------------------------------------------------------------------------------
 
-Inputs for Mine Assignment Optimization Logic
+## Inputs for Mine Assignment Optimization Logic
 
 The **Assignment Engine Logic** within mine management systems like DISPATCH and Joptimizer relies on a comprehensive and dynamically updated set of **Assignment Decision Inputs** to achieve its core objective: minimizing cost and maximizing production by generating the most efficient truck assignments possible [1, 2]. These inputs span configuration parameters, real-time measurements, calculated metrics, and human-defined constraints, all integrated to inform the Linear Programming (LP) and Dynamic Assignment (DA) layers of the optimization process [2-7].
 
@@ -493,7 +493,7 @@ All these inputs collectively feed into the dual optimization layers: LP defines
 
 --------------------------------------------------------------------------------
 
-User Impact on Mine Fleet Optimization
+## User Impact on Mine Fleet Optimization
 
 The concept of "**What Do I Impact?**" directly addresses the critical role that various users—particularly the Fleet Users (Mine Controllers and Builders)—play in maintaining the integrity of the mine data and configuring the system inputs, which directly dictates the behavior and effectiveness of the Assignment Engine Logic.
 
@@ -529,7 +529,7 @@ The sources list 11 major areas where users directly influence the optimization 
 
 --------------------------------------------------------------------------------
 
-Automatic and Manual Triggers in Mine Haulage Assignment
+## Automatic and Manual Triggers in Mine Haulage Assignment
 
 The sources identify a variety of automatic and manual events, known as **Assignment Triggers**, that prompt the assignment engine (Dynamic Programming, DP, or Dynamic Assignment, DA) within the Optimization Strategy (DOS/Joptimizer/DISPATCH) to recalculate and issue a new assignment to a haul truck or piece of equipment. These triggers are critical for maintaining the efficiency and accuracy of the system by ensuring truck assignments reflect the constantly changing operational realities of the mine.
 
@@ -579,7 +579,7 @@ The assignment engine relies heavily on continuous data flow to verify the state
 
 --------------------------------------------------------------------------------
 
-Haul Truck Dump Completion Assignment Trigger
+## Haul Truck Dump Completion Assignment Trigger
 
 The event where a **truck finishes dumping** is a highly critical **assignment trigger** that signals the end of the loaded portion of the haul cycle and immediately initiates the process for assigning the empty truck to its next loading destination (shovel).
 
@@ -627,7 +627,7 @@ The successful completion of the dumping activity is vital for data integrity; i
 
 --------------------------------------------------------------------------------
 
-Truck Operator Assignment Request Mechanism
+## Truck Operator Assignment Request Mechanism
 
 The sources clearly identify a **truck operator requesting an assignment** as a key **event-based trigger** that prompts the assignment engine (Dynamic Programming/Dynamic Assignment Layer, or DP/DA) to generate a new automatic assignment for the truck [1-7]. This action typically occurs when the operator presses a specific button on the onboard field computer screen [4].
 
@@ -667,7 +667,7 @@ Ultimately, the operator's request acts as an immediate command to the system to
 
 --------------------------------------------------------------------------------
 
-Mine Controller Triggered Assignment Mechanism
+## Mine Controller Triggered Assignment Mechanism
 
 The sources clearly identify a **Mine Controller requests assignment** as an **event-based trigger** that prompts the assignment engine (Dynamic Programming or DA Layer) to calculate and issue an immediate assignment to a truck [1], [2], [3], [4], [5].
 
@@ -703,7 +703,7 @@ In essence, the "Mine Controller requests assignment" trigger acts as a critical
 
 --------------------------------------------------------------------------------
 
-Misroute Detection and Truck Reassignment Dynamics
+## Misroute Detection and Truck Reassignment Dynamics
 
 The sources identify a truck diverting from its assigned path, or going **off-course (misroute detection)**, as a crucial **event-based trigger** for the optimization system (DP/DA layer) to initiate a reassignment calculation to maintain efficiency and control over the haulage cycle.
 
@@ -747,7 +747,7 @@ In summary, misroute detection serves as a vital safeguard, forcing the reassign
 
 --------------------------------------------------------------------------------
 
-Material Change as Assignment Trigger in Mining
+## Material Change as Assignment Trigger in Mining
 
 The sources identify **a truck's loaded material changing** as a specific **Event-based Trigger** that causes the assignment engine (Dynamic Assignment/DP layer) to re-evaluate the truck's intended dump assignment, especially if the new material type conflicts with the current route or destination constraints [1-4].
 
@@ -781,7 +781,7 @@ If the assignment fails due to material configuration issues, the Assignment Con
 
 --------------------------------------------------------------------------------
 
-Assignment Triggers and Dynamic Delay Management
+## Assignment Triggers and Dynamic Delay Management
 
 The end of an assignment delay is explicitly identified in the sources as an **Assignment Trigger** that causes the automatic assignment engine (Dynamic Programming/DA Layer) to recalculate and issue a new assignment to the affected equipment.
 
@@ -835,7 +835,7 @@ The conclusion of an assignment delay is recorded in the system's time managemen
 
 --------------------------------------------------------------------------------
 
-Dynamic Truck Assignment Trigger: Reassignment Waypoints
+## Dynamic Truck Assignment Trigger: Reassignment Waypoints
 
 The sources establish that a **truck entering a reassignment waypoint** is a specific **event-based trigger** that causes the Dynamic Assignment (DA) layer (also referred to as Dynamic Programming or DP) of the optimization system (DISPATCH or Joptimizer) to evaluate and potentially change the truck's current assignment to a more optimal destination [1-7].
 
@@ -893,7 +893,7 @@ The reassignment waypoint is one type of event that triggers assignment re-evalu
 
 --------------------------------------------------------------------------------
 
-Mining Fleet Assignment Failure Modes
+## Mining Fleet Assignment Failure Modes
 
 The sources extensively detail the various **Assignment Failure Modes** within the mining fleet management systems, particularly emphasizing that these failures arise when the Assignment Engine (Dynamic Programming/DA Layer) cannot determine a valid or optimal assignment due to conflicting constraints, missing data, or equipment status issues. Understanding these modes is critical because inaccurate knowledge of the mine prevents the system from making the best decisions, leading to poor assignments, queuing, idle loaders, and increased costs per ton [1, 2].
 
@@ -977,7 +977,7 @@ Poor data quality is a major underlying cause of assignment issues, leading to s
 
 --------------------------------------------------------------------------------
 
-Mining Fleet Optimization Strategy and Dynamic Assignment Logic
+## Mining Fleet Optimization Strategy and Dynamic Assignment Logic
 
 The sources provide a comprehensive view of the **Optimization Strategy (DOS)** (also referred to as Joptimizer in some materials), defining it as an automatic, multi-layered mechanism used by mining fleet management systems like DISPATCH and Cat MineStar System Fleet to maximize overall truck productivity, minimize operating costs, and ensure adherence to the short-term mine plan [1-5].
 
@@ -1031,7 +1031,7 @@ In summary, the Optimization Strategy relies on synthesizing a wide array of pla
 
 --------------------------------------------------------------------------------
 
-Linear Programming for Mine Dispatch Optimization
+## Linear Programming for Mine Dispatch Optimization
 
 The sources define **Phase 1: Linear Programming (LP)** as the critical planning stage within the overall **DISPATCH Optimization Strategy (DOS)** or **Joptimizer** system. The primary role of the LP layer is to generate a theoretical, optimal plan, known as the **LP solution** or **Production Plan**, for material movement throughout the mine by maximizing overall truck productivity while strictly adhering to numerous constraints [1-9].
 
@@ -1091,7 +1091,7 @@ The phrase "**Computing LP, Please Wait**" appears on the Transaction window whe
 
 --------------------------------------------------------------------------------
 
-Linear Programming for Mine Truck Productivity Maximization
+## Linear Programming for Mine Truck Productivity Maximization
 
 The sources emphasize that the overarching objective of **Phase 1: Linear Programming (LP)** within the optimization strategy (DOS or Joptimizer) is to **maximize overall truck productivity** in the mine [1-7]. This is achieved by generating a robust, theoretical master plan, known as the **LP solution**, which defines the optimal allocation of haulage resources [2, 8-10].
 
@@ -1139,7 +1139,7 @@ If no production objectives (like Goals or Priorities) are explicitly configured
 
 --------------------------------------------------------------------------------
 
-Mine Production Optimization via Linear Programming
+## Mine Production Optimization via Linear Programming
 
 The determination of **production circuits and their associated feed rates** is the core function of **Phase 1: Linear Programming (LP)** within the overall optimization strategy (DOS or Joptimizer) used in mining fleet management systems like DISPATCH and Hexagon Mining's Jigsaw solution. The LP layer creates a **theoretical master plan (LP solution)** that dictates the optimal flow of material throughout the mine to maximize overall truck productivity.
 
@@ -1197,7 +1197,7 @@ In summary, the LP layer synthesizes the physical mine model, operational constr
 
 --------------------------------------------------------------------------------
 
-Linear Programming Truck Productivity Weighting in Haulage Optimization
+## Linear Programming Truck Productivity Weighting in Haulage Optimization
 
 The concept of the Linear Programming (LP) layer selecting the **most productive paths (weighted by productivity)** is fundamental to how the optimization strategy (DOS or Joptimizer) creates the theoretical master plan for haulage operations. This selection process is critical because it dictates which production circuits the Dynamic Programming (DP) layer will attempt to enforce in real time, aiming to maximize overall truck productivity and minimize costs [1-5].
 
@@ -1237,7 +1237,7 @@ Ultimately, the goal of this weighted path selection is the **maximization of o
 
 --------------------------------------------------------------------------------
 
-Linear Programming Constraints in Mine Material Flow
+## Linear Programming Constraints in Mine Material Flow
 
 The sources extensively detail how **shovel-to-dump locks** and **material bars/restrictions** are integral constraints within **Phase 1: Linear Programming (LP)**, which calculates the theoretical master plan (LP solution) for optimizing material flow in the mine.
 
@@ -1293,7 +1293,7 @@ In essence, LP considers these locks and material restrictions as structural rul
 
 --------------------------------------------------------------------------------
 
-Linear Programming Global Configuration Parameters for Mining Fleets
+## Linear Programming Global Configuration Parameters for Mining Fleets
 
 The sources identify **LP Global Configuration Parameters** as a crucial set of controls within the Linear Programming (LP) layer (Phase 1) of the optimization strategy (DOS or Joptimizer) used by mining fleet management systems like DISPATCH and Hexagon Mining's solutions. These parameters establish the fundamental rules and assumptions that guide the LP model in maximizing overall truck productivity and determining the resulting Production Plan.
 
@@ -1367,7 +1367,7 @@ The results of how these parameters affect the overall production plan can be vi
 
 --------------------------------------------------------------------------------
 
-Dynamic Programming in Mine Optimization Strategy
+## Dynamic Programming in Mine Optimization Strategy
 
 The sources describe **Phase 2: Dynamic Programming (DP)** as the real-time execution component of the overall **Optimization Strategy (DOS)** or the Joptimizer system, which works to translate the theoretical production plan (Phase 1: Linear Programming or LP solution) into concrete assignments for trucks and shovels.
 
@@ -1419,7 +1419,7 @@ In essence, DP acts as the real-time field commander, translating the strategic 
 
 --------------------------------------------------------------------------------
 
-Dynamic Programming for Real-Time Truck Assignment
+## Dynamic Programming for Real-Time Truck Assignment
 
 The Dynamic Programming (DP) model, or Dynamic Assignment Layer, is the second critical phase of the DISPATCH Optimization Strategy (DOS) or Joptimizer process, and its core function is to **generate real-time truck assignments** in the mine by executing the theoretical master plan created by the Linear Programming (LP) layer [1-8].
 
@@ -1493,7 +1493,7 @@ The final assignment is communicated to the truck operator via the onboard displ
 
 --------------------------------------------------------------------------------
 
-Dynamic Programming Truck-to-Shovel Restrictions and Locks
+## Dynamic Programming Truck-to-Shovel Restrictions and Locks
 
 The sources provide extensive details on **truck-to-shovel locks/bars** and how they function as constraints within the optimization process, specifically influencing **Phase 2: Dynamic Programming (DP)**, which is responsible for real-time truck assignments.
 
@@ -1545,7 +1545,7 @@ The priority of having a **Dump Lock on Truck overrides all other rules**, even
 
 --------------------------------------------------------------------------------
 
-Mine Optimization: Production Planning and Assignment Constraints
+## Mine Optimization: Production Planning and Assignment Constraints
 
 The sources consistently emphasize that **Production Planning & Constraints** form the foundational framework for optimizing mine operations within systems like Cat MineStar System Fleet and Modular Mining's DISPATCH. This framework dictates the goals and limits the system must adhere to when generating automatic truck assignments to maximize productivity and minimize costs [1-12].
 
@@ -1623,7 +1623,7 @@ The goal of coordinating all these planning factors and constraints is the autom
 
 --------------------------------------------------------------------------------
 
-Production Goals and Constraints in Automated Mining
+## Production Goals and Constraints in Automated Mining
 
 The sources extensively define **Goals** as explicit, quantifiable targets crucial for guiding the automated **Production Plan** and optimizing mining operations within the complex landscape of Production Planning & Constraints. Goals serve as the definitive measures against which the assignment engine operates, determining resource allocation and material flow.
 
@@ -1675,7 +1675,7 @@ Effective production planning relies on setting realistic and practical constrai
 
 --------------------------------------------------------------------------------
 
-Defining and Optimizing Production Goals in Fleet Management
+## Defining and Optimizing Production Goals in Fleet Management
 
 The sources define **Goals** as **numerical production objectives** that are critical constraints used by the fleet management system's optimization engine (Linear Programming or LP layer) to guide the Production Plan and achieve site targets. These numerical values provide explicit quantitative boundaries for material flow and resource allocation during a shift.
 
@@ -1721,7 +1721,7 @@ Before goals are implemented, they can be tested using features like **Decision
 
 --------------------------------------------------------------------------------
 
-Defining Production Goals in Mine Management Systems
+## Defining Production Goals in Mine Management Systems
 
 The **Production Requirements Assistant** is the central utility used in the Cat MineStar System (and functionally similar tools in Jigsaw/Hexagon Mining systems) that allows mine controllers to define and manage the parameters that govern the overall **Production Plan**. Within this Assistant, **Goals** are explicitly created and defined, serving as the quantitative objectives that drive the assignment engine's optimization logic.
 
@@ -1765,7 +1765,7 @@ Once goals are defined and validated in the editor, they are incorporated into t
 
 --------------------------------------------------------------------------------
 
-Mine Fleet Goal Editor and Production Planning
+## Mine Fleet Goal Editor and Production Planning
 
 The **Goal Editor** is a specific interface used within the mining fleet management system (like DISPATCH or Joptimizer) to define quantitative constraints and objectives, or **Goals**, which directly influence the system's Production Plan and truck assignment logic. This tool allows controllers to articulate precise production requirements for material flow within the mine [1-3].
 
@@ -1841,7 +1841,7 @@ The general principle is that the system operates most effectively when provided
 
 --------------------------------------------------------------------------------
 
-Production Planning Priorities and Shovel Allocation Schemes
+## Production Planning Priorities and Shovel Allocation Schemes
 
 The sources extensively discuss **Priorities** within the context of **Production Planning & Constraints**, defining them as critical operational controls used primarily in optimization models (like DISPATCH's LP/DP or Hexagon's Joptimizer) to direct resource allocation and ensure high-value production targets are met, especially when resources (like trucks) are limited.
 
@@ -1897,7 +1897,7 @@ Priorities are fundamentally integrated with other constraints in Production Pla
 
 --------------------------------------------------------------------------------
 
-Optimization Hierarchy: Goals, Priorities, and Constraints
+## Optimization Hierarchy: Goals, Priorities, and Constraints
 
 The sources indicate that there is a **hierarchy of goals and priorities** that the optimization system (specifically the LP and DP models) must manage when generating the Production Plan and determining truck assignments. This hierarchy establishes the relative importance of different operational targets and constraints, especially in resource-constrained situations like under-trucking.
 
@@ -1943,7 +1943,7 @@ This layered system of controls ensures that mandatory tasks (like safety and ma
 
 --------------------------------------------------------------------------------
 
-Mine Fleet Priority and Capacity Allocation Hierarchy
+## Mine Fleet Priority and Capacity Allocation Hierarchy
 
 The concept of **Priorities** is directly linked to the **order of capacity allocation** for equipment, especially shovels, within the optimization strategies of mining fleet management systems like DISPATCH and Joptimizer. Priorities dictate which resources receive limited hauling capacity first, particularly when the mine is facing an undersupply of trucks (undertrucked situations).
 
@@ -1997,7 +1997,7 @@ The priority setting heavily influences how other control mechanisms affect capa
 
 --------------------------------------------------------------------------------
 
-Goals Versus Priorities in Production Planning
+## Goals Versus Priorities in Production Planning
 
 The sources provide a direct recommendation regarding the use of **Goals** over **Priorities** within the Production Plan, suggesting that Goals offer a less ambiguous method for guiding the assignment engine.
 
@@ -2039,7 +2039,7 @@ In summary, while priorities establish which resources are favored (e.g., excava
 
 --------------------------------------------------------------------------------
 
-Mine Production Plan: Optimization and Constraints
+## Mine Production Plan: Optimization and Constraints
 
 The **Production Plan** is the overarching strategy established by the optimization algorithms to maximize material movement and efficiency, while adhering to the specific needs and limitations of the mine site [1], [2]. In the larger context of **Production Planning & Constraints**, the Production Plan is the direct outcome of balancing the site's goals with the real-time operational constraints and physical limits of the mine [1], [3], [4].
 
@@ -2103,7 +2103,7 @@ The Production Plan is dynamic and must be continuously checked and executed:
 
 --------------------------------------------------------------------------------
 
-Automated Mine Assignment Goals and Prioritization
+## Automated Mine Assignment Goals and Prioritization
 
 The core function of the automated assignment system, whether it is **Cat MineStar Fleet/DISPATCH** or the Hexagon Mining **Joptimiser**, is to create a **Production Plan** that is centrally derived from, and continuously calculated to fulfill, the **site’s overall goals** for the shift [1-3]. The entire optimization process is fundamentally driven by adhering to these production goals and priorities, which translates directly into minimizing operational costs and maximizing efficiency [4-7].
 
@@ -2135,7 +2135,7 @@ By integrating site goals directly into the mathematical framework (Linear Progr
 
 --------------------------------------------------------------------------------
 
-Automated Optimization in Mining Production Planning
+## Automated Optimization in Mining Production Planning
 
 The sources consistently emphasize that key aspects of the **Production Plan** are **computed automatically by algorithms** within the fleet management systems (DISPATCH or Joptimizer), forming the intellectual core of the mine’s optimization strategy. This automated calculation aims to maximize efficiency and minimize costs, using real-time data and predetermined constraints to define the most productive operational flow.
 
@@ -2179,7 +2179,7 @@ Although the core plan is automatically computed, its accuracy relies heavily on
 
 --------------------------------------------------------------------------------
 
-Mining Production Plan and Arc Allocation
+## Mining Production Plan and Arc Allocation
 
 The allocation of haul trucks within the mining system, managed by the Dynamic Assignment (DA) or Dynamic Programming (DP) layer, is governed by the larger strategic framework known as the **Production Plan**. This plan is inherently defined by the **combination of feasible production arcs** calculated in the Linear Programming (LP) layer, which establishes the required flow rates necessary to meet the site's overall goals and priorities [1], [2], [3].
 
@@ -2239,7 +2239,7 @@ In summary, the **Production Plan** is the theoretical optimal arrangement of 
 
 --------------------------------------------------------------------------------
 
-The Mining Production Arc and Optimization Engine
+## The Mining Production Arc and Optimization Engine
 
 The concept of the **Production Arc** is fundamental to how the optimization engine (Linear Programming or LP layer) within a mine management system like DISPATCH or Joptimiser structures and executes the overall **Production Plan**. The Production Arc defines the complete, feasible link required for material flow, specifically combining a specific loading tool, a dump destination (processor), and the material being moved.
 
@@ -2295,7 +2295,7 @@ In short, the Production Arc ties together the source, destination, and product 
 
 --------------------------------------------------------------------------------
 
-Mining Truck Assignment Constraints and Optimization
+## Mining Truck Assignment Constraints and Optimization
 
 The concept of **"Other Considerations"** encapsulates a crucial set of inputs, constraints, and special assignments that move beyond fundamental capacity balancing to ensure that automated assignment systems, such as DISPATCH or Joptimizer, meet the full complexity of daily **Production Planning & Constraints**. These considerations integrate safety, maintenance, scheduling, and material quality into the optimization model.
 
@@ -2351,7 +2351,7 @@ These considerations demonstrate that optimal truck assignment requires far more
 
 --------------------------------------------------------------------------------
 
-Scheduled Assignments in Dynamic Mining Optimization
+## Scheduled Assignments in Dynamic Mining Optimization
 
 The sources define **Scheduled Assignments** as vital "Other Considerations" within the dynamic mining optimization strategy, especially for maintenance activities like **refueling**. These assignments are planned interruptions to the normal production cycle designed to ensure equipment availability and cost efficiency by preventing critical failures or delays.
 
@@ -2411,7 +2411,7 @@ In essence, scheduled assignments ensure that non-production tasks essential for
 
 --------------------------------------------------------------------------------
 
-Mining Truck Assignment Scheduling and Refueling Optimization
+## Mining Truck Assignment Scheduling and Refueling Optimization
 
 The sources identify **Scheduled Assignments** (including those for refueling) as a critical category of constraints that the mining optimization system (specifically the Dynamic Programming (DP) or Joptimizer layer) must actively manage, alongside other considerations such as blending requirements and TKPH constraints, to ensure efficient operation and adherence to maintenance schedules [1-4].
 
@@ -2467,7 +2467,7 @@ In essence, while the main goal of the assignment engine is productivity, **sch
 
 --------------------------------------------------------------------------------
 
-Mining Optimization Blending Requirements and Constraints
+## Mining Optimization Blending Requirements and Constraints
 
 The sources identify **Blending requirements** as a major operational constraint and input that the mining optimization system (such as DISPATCH or Joptimizer) must consider when generating assignments, particularly for haul trucks moving material from shovels to processors or dumps. In the context of **Other Considerations** that influence the Dynamic Programming (DP) or optimization engine, blending ensures that the material delivered meets specific quality or quantity targets.
 
@@ -2519,7 +2519,7 @@ In essence, blending requirements operate as powerful **cost-minimization const
 
 --------------------------------------------------------------------------------
 
-Mining Operations: TKPH Tire Management and Assignment Logic
+## Mining Operations: TKPH Tire Management and Assignment Logic
 
 The sources highlight that **TKPH (Ton Kilometers Per Hour)**, or its imperial equivalent TMPH (Ton Miles Per Hour), is a critical safety and operational parameter related to tire performance, and managing it forms one of the essential constraints considered by the automated assignment system, alongside other optimization variables.
 
@@ -2559,7 +2559,7 @@ The Controller's role includes continuously **monitoring TKPH** values (often 
 
 --------------------------------------------------------------------------------
 
-Dynamic Travel Time in Fleet Optimization
+## Dynamic Travel Time in Fleet Optimization
 
 The sources extensively discuss the calculation and use of **Travel Times** for mobile equipment, particularly haul trucks, emphasizing that accurate travel time is a critical component influencing the optimization of operations and overall assignment decisions. Travel time calculations are continuously updated and are integrated throughout the entire fleet management system (like DISPATCH or Joptimizer).
 
@@ -2607,7 +2607,7 @@ In summary, **travel time** is a core operational metric that anchors the func
 
 --------------------------------------------------------------------------------
 
-MineStar Data Integrity for Optimization and Operations
+## MineStar Data Integrity for Optimization and Operations
 
 The operational effectiveness of the **Cat MineStar System Fleet** and **DISPATCH** optimization relies fundamentally on maintaining high **Data Integrity** across all mine information components. Poor data quality in the system directly undermines the efficiency of **Operations & Assignments**, leading to measurable losses in productivity and increased costs.
 
@@ -2679,7 +2679,7 @@ In essence, data integrity is not a static state but a dynamic process of contin
 
 --------------------------------------------------------------------------------
 
-Haul Truck Management and Data Integrity Utility
+## Haul Truck Management and Data Integrity Utility
 
 The **TruckMod Utility** (or Truck Utility/Truck Assistant) serves as the dedicated administrative interface for **Haul Trucks**, making it an indispensable tool for maintaining **Data Integrity** within the mine fleet management system. The accuracy of the information managed via this utility is directly linked to the performance of the optimization algorithms and the reliability of production reporting.
 
@@ -2731,7 +2731,7 @@ Controllers regularly use the Truck Utility to ensure the real-time model of the
 
 --------------------------------------------------------------------------------
 
-Haul Truck Operational Status and Mine Dispatching
+## Haul Truck Operational Status and Mine Dispatching
 
 The operational **Status** of haul trucks, which includes states such as **Ready, Down, Delay, Standby, and Shiftchange**, is a critical real-time data point managed and monitored by Mine Controllers, primarily through utilities like the **TruckMod Utility** and the **Dispatch Utility**. A truck's status dictates its availability for automatic assignment and heavily impacts the accuracy of optimization calculations.
 
@@ -2787,7 +2787,7 @@ Maintaining accurate status is crucial because the entire optimization algorithm
 
 --------------------------------------------------------------------------------
 
-Haul Truck Last and Next Action Systems
+## Haul Truck Last and Next Action Systems
 
 The concepts of **Last Action** and **Next Action** are crucial, real-time indicators for haul trucks, defining the current state of the truck within the haul cycle and the immediate expected event that must occur next to maintain operational flow. These fields are prominently featured in the **TruckMod Utility** (or Truck Utility/Truck Assistant) and related control screens like the **Dispatch Utility** and the **Action section** of the MineView application.
 
@@ -2840,7 +2840,7 @@ The tracking of Last/Next Actions is paramount for maintaining **data integrity
 
 --------------------------------------------------------------------------------
 
-Mine Haul Truck Location and Destination Management
+## Mine Haul Truck Location and Destination Management
 
 The sources emphasize that the **Location/Destination** of haul trucks is fundamental to the automated assignment, optimization, and reporting capabilities of mine management systems like DISPATCH and Jmineops. This information is meticulously tracked, continuously updated, and often manually managed by the Mine Controller using utilities such as the **TruckMod Utility** (or Truck Assistant).
 
@@ -2890,7 +2890,7 @@ Accurate location and destination data is non-negotiable for the optimization en
 
 --------------------------------------------------------------------------------
 
-Mine Management Locks and Bars System Controls
+## Mine Management Locks and Bars System Controls
 
 The sources provide comprehensive details regarding **Locks and Bars** as critical restrictions used within mine management systems (like DISPATCH or Jmineops) to control the movement and assignment of **Haul Trucks**. These restrictions, configured primarily through utilities such as the **TruckMod Utility** and the **Shovel Utility** (or Loading Tool Assistant), dictate which equipment a truck is definitively _assigned to_ (Lock) or explicitly _prevented from accessing_ (Bar).
 
@@ -2954,7 +2954,7 @@ If no lock is set, the truck loaded with a specific grade will be assigned to th
 
 --------------------------------------------------------------------------------
 
-LPTRUCK Types: Classification for Haulage Optimization
+## LPTRUCK Types: Classification for Haulage Optimization
 
 The sources provide a detailed explanation of **LPTRUCK Types** as a classification system fundamental to the operation of the Linear Programming (LP) and Dynamic Programming (DP) optimization models, particularly as they relate to matching haul trucks with loading units (shovels/excavators) for maximizing productivity. These types are managed and assigned to individual haul trucks through maintenance options accessible via the **TruckMod Utility** or the **Linear Programming Configuration Utility**.
 
@@ -2996,7 +2996,7 @@ In summary, the LPTRUCK Type serves as the optimization kernel's standard unit o
 
 --------------------------------------------------------------------------------
 
-Haul Truck Speed Factor and Optimization Utility
+## Haul Truck Speed Factor and Optimization Utility
 
 The sources identify the **Truck Speed Factor** as a specific configurable parameter within the management of haul trucks, primarily via the **TruckMod Utility** (or Truck Utility), that plays a direct role in calculating travel times and estimating overall cycle durations within the optimization system. This factor is crucial for ensuring the accuracy of truck assignments and overall mine productivity.
 
@@ -3026,7 +3026,7 @@ In essence, the Truck Speed Factor provides a mechanism for the Mine Controller 
 
 --------------------------------------------------------------------------------
 
-Haul Truck Tire Retorque Trip Management
+## Haul Truck Tire Retorque Trip Management
 
 The sources identify **Retorque Trips Left** as a specific, mechanical maintenance parameter tracked for haul trucks and managed through the **TruckMod Utility** and the associated monitoring systems. This value is directly related to tire maintenance following new tire installation and plays a role in scheduled maintenance assignments.
 
@@ -3054,7 +3054,7 @@ By monitoring this metric, the mine management system helps ensure tire maintena
 
 --------------------------------------------------------------------------------
 
-ShovelMod Utility: Mining Fleet Data Integrity and Control
+## ShovelMod Utility: Mining Fleet Data Integrity and Control
 
 The sources position **Shovels/Loaders** (often referred to as excavators or digging units) and the associated **ShovelMod Utility** (or Shovel Utility/Loading Tool Assistant) as central components for managing the mine model, production cycles, and ensuring **Data Integrity** within the fleet management system (like DISPATCH or Jmineops) [1-3]. The integrity of shovel data is paramount because inaccurate information leads directly to poor assignments, queuing, idle loaders, misdirected loads, and higher costs per ton [4-9].
 
@@ -3104,7 +3104,7 @@ The ShovelMod Utility manages critical constraints that dictate assignment feasi
 
 --------------------------------------------------------------------------------
 
-Mine Management Shovel Location and Assignment Control
+## Mine Management Shovel Location and Assignment Control
 
 The **Location** of a shovel (or loader) is a core piece of real-time operational data managed within the mine management system, centrally configured and modified primarily through the **ShovelMod Utility** (or **Loading Tool Assistant**) and a corresponding location system like the **Location Utility** (LocMod Utility). This location data is crucial because it integrates the mobile shovel with the fixed mine infrastructure model, directly affecting assignments, productivity calculations, and system integrity.
 
@@ -3154,7 +3154,7 @@ If the pit model is not maintained (i.e., if shovel location is not updated when
 
 --------------------------------------------------------------------------------
 
-MineStar Shovel Statuses and Truck Assignment Logic
+## MineStar Shovel Statuses and Truck Assignment Logic
 
 The status of **Shovels/Loaders** (referred to collectively as excavators, loading units, or digging units) is a crucial real-time operational input managed by the Mine Controller, primarily through specialized tools like the **ShovelMod Utility** or **Loading Tool Assistant**. The status dictates the availability of the equipment and profoundly influences the overall mine optimization and assignment process [1-12].
 
@@ -3193,7 +3193,7 @@ The concept of status is integrated into assignment troubleshooting; for instanc
 
 --------------------------------------------------------------------------------
 
-Mine Optimization through Shovel Dig Rate and Capacity
+## Mine Optimization through Shovel Dig Rate and Capacity
 
 The sources extensively define and discuss **Dig Rate (Tons/Hr)** as a critical performance metric for shovels and loaders, managed and utilized by mine management systems like DISPATCH and Jmineops to optimize truck assignments within the broader context of the **ShovelMod Utility** and the Linear Programming (LP) layer.
 
@@ -3237,7 +3237,7 @@ In essence, while the Dig Rate indicates the raw speed of loading, the operation
 
 --------------------------------------------------------------------------------
 
-Mining Shovel Priority and Allocation Optimization
+## Mining Shovel Priority and Allocation Optimization
 
 The sources provide significant detail regarding **Ore/Waste Priority** within the context of managing shovels/loaders, particularly how these priorities are configured using tools like the **ShovelMod Utility** and the **Shovel Priority/Coverage Utility**, and how they influence the **Linear Programming (LP)** layer of the optimization system.
 
@@ -3285,7 +3285,7 @@ The Shovel Utility often displays the individual **Ore Priority** and **Waste
 
 --------------------------------------------------------------------------------
 
-Truck Cycle Spotting Time: Definition, Calculation, and Optimization
+## Truck Cycle Spotting Time: Definition, Calculation, and Optimization
 
 The sources define **Spotting Time** as a critical component of the truck cycle that measures the time a haul truck spends positioning itself for loading or unloading, specifically in relation to **Shovels/Loaders**. This metric is vital for calculating cycle durations, optimizing assignments, and gauging the efficiency of loading operations. The configuration of how this time is recorded is managed within the shovel/loader management utilities, such as the **ShovelMod Utility**.
 
@@ -3327,7 +3327,7 @@ The reliance on accurate spotting time emphasizes that **every second counts**�
 
 --------------------------------------------------------------------------------
 
-Quick Spotting Feature in Haul Cycle Optimization
+## Quick Spotting Feature in Haul Cycle Optimization
 
 The sources mention **Quick Spotting** as a configurable feature specifically associated with managing loading tools (shovels, excavators, and loaders) through utilities like the **ShovelMod Utility** within the context of optimizing the haul cycle.
 
@@ -3363,7 +3363,7 @@ If the Quick Spotting field is marked **YES**, the system effectively chooses n
 
 --------------------------------------------------------------------------------
 
-Mine Management Auto-Arrive Functionality and GPS Beacons
+## Mine Management Auto-Arrive Functionality and GPS Beacons
 
 The concept of **Auto-Arrive** is a configuration feature used in mine management systems like DISPATCH and Jmineops, specifically managed through the **ShovelMod Utility** (for shovels/loaders) and the **Location Utility** (for fixed locations/beacons). It relates directly to the automation of the haul cycle, reliance on **GPS virtual beacons**, and improving the accuracy of recorded cycle times.
 
@@ -3403,7 +3403,7 @@ In short, Auto-Arrive is a core element in the assignment system's reliance on a
 
 --------------------------------------------------------------------------------
 
-Mine Location Utility and Data Integrity
+## Mine Location Utility and Data Integrity
 
 The sources portray **Locations**, managed primarily through the **Location Utility** (also referred to as LocMod Utility, Dump Utility, or Dispatch Utility), as a fundamental category of mine information components critical for the proper functioning of the mine management system and the preservation of **Data Integrity**. These utilities allow for the definition, configuration, and control of all fixed physical points within the mine model, which directly impacts optimization algorithms, operational assignments, and reporting accuracy.
 
@@ -3459,7 +3459,7 @@ The rigorous definition and maintenance of locations is inseparable from the goa
 
 --------------------------------------------------------------------------------
 
-Mine Management System Location Types and Utility
+## Mine Management System Location Types and Utility
 
 The sources identify various **location types** within a mine management system (such as DISPATCH or Jmineops) that serve specific functional roles in the mining operation and are managed centrally through utilities like the **Location Utility** or **LocMod Utility**. These locations form the structural foundation of the mine model and are critical inputs for optimization algorithms, directly impacting **Data Integrity**.
 
@@ -3523,7 +3523,7 @@ The **Location Utility** or **LocMod Utility** is the tool used to manage al
 
 --------------------------------------------------------------------------------
 
-Mine Location Hierarchy and Management Utility
+## Mine Location Hierarchy and Management Utility
 
 The sources establish a clear hierarchical structure for defining the physical space within the mine model, managed primarily through the **Location Utility** (also referred to as LocMod Utility), progressing from the broadest entities down to specific operational points: **Pits > Regions > Specific Locations**. This hierarchy is foundational for organizing the mine environment, enforcing constraints, and supporting the optimization algorithms.
 
@@ -3571,7 +3571,7 @@ The accurate configuration of the Pit > Region > Location hierarchy is crucial f
 
 --------------------------------------------------------------------------------
 
-Mine Location Statuses and Operational Impact
+## Mine Location Statuses and Operational Impact
 
 The operational **Status** of a location (such as **Ready, Down, Delay, or Shiftchange**) is a critical piece of configuration data managed primarily through the **Location Utility** (also known as LocMod Utility or Dispatch Utility). This status directly influences the core functions of the mine management system, especially the optimization and assignment algorithms, and is paramount for maintaining **Data Integrity** and efficient operations.
 
@@ -3606,7 +3606,7 @@ In sum, location statuses are central controls configured via the Location Utili
 
 --------------------------------------------------------------------------------
 
-Mine Optimization: Capacity and Target Feed Rates
+## Mine Optimization: Capacity and Target Feed Rates
 
 The sources extensively discuss **Target Feed Rate (Tons/Hr)** and **Dump Capacity (Tons/Hr)** as crucial parameters configured within the mine management system's **Location Utility** (also referred to as LocMod Utility, Dump Utility, or Dispatch Utility) that directly influence the Linear Programming (LP) and Dynamic Programming (DP) models responsible for optimizing truck assignments and material flow.
 
@@ -3668,7 +3668,7 @@ If dump targets are set but not achieved on time, the system accumulates the def
 
 --------------------------------------------------------------------------------
 
-Mining Traffic Control: Max Trucks at Location
+## Mining Traffic Control: Max Trucks at Location
 
 The concept of **"Max Trucks at this Loc"** (Maximum Trucks at this Location) is a crucial operational parameter within the mine management system, specifically configured within the **Location Utility** (also referred to as LocMod Utility) to manage traffic flow and prevent queuing at processing or service destinations.
 
@@ -3704,7 +3704,7 @@ The `Max Trucks at this Loc` value serves as a constraint used by the optimiza
 
 --------------------------------------------------------------------------------
 
-Managing Equipment Tiedown Locations and Procedures
+## Managing Equipment Tiedown Locations and Procedures
 
 The sources provide extensive information on **Tiedown Location Status** (often referred to interchangeably as Shiftchange or Parkup locations) within the **Locations** management framework (using utilities like the **Location Utility**, **LocMod Utility**, and **Tiedown Utility**) [1-7].
 
@@ -3778,7 +3778,7 @@ Tiedown locations and associated assignments are monitored primarily through the
 
 --------------------------------------------------------------------------------
 
-Mine Haul Roads and Optimization Data Integrity
+## Mine Haul Roads and Optimization Data Integrity
 
 The sources define **Haul Roads** as a fundamental element of the mine model within systems like DISPATCH and Jmineops, and the **Road Utility** (or **RoadMod Utility**) as the primary tool for managing this component. The accurate management of haul roads is critically tied to maintaining **Data Integrity** because the road network directly underpins the optimization algorithms used for truck assignments and cycle time calculations.
 
@@ -3822,7 +3822,7 @@ The sources stress that the dispatcher must continuously monitor and maintain a�
 
 --------------------------------------------------------------------------------
 
-Mine Haul Road Structure and Management
+## Mine Haul Road Structure and Management
 
 The phrase **"Between two consecutive locations"** is the fundamental definition used by the sources to describe a **Haul Road** or **Road Segment** in a mine's network, which is managed through utilities like the **Road Utility** or **RoadMod Utility**.
 
@@ -3868,7 +3868,7 @@ The correct definition of the haul road network, sectioned by "consecutive locat
 
 --------------------------------------------------------------------------------
 
-Haul Road Statuses and Traffic Control
+## Haul Road Statuses and Traffic Control
 
 The statuses **Open Forward, Open Return, and Closed** refer to the configuration options available for **Haul Roads** or **Road Segments** within mine management systems like DISPATCH and Jmineops, specifically managed via the **Road Utility** or Haul Route Utility. These statuses are crucial for controlling traffic patterns and ensuring the assignment engine calculates valid and efficient routes for haul trucks.
 
@@ -3920,7 +3920,7 @@ The status of the road network directly affects the efficacy of the optimization
 
 --------------------------------------------------------------------------------
 
-Mine Grade and Blending Utility Management
+## Mine Grade and Blending Utility Management
 
 The sources emphasize that **Grade & Blending**, managed through tools such as the **Grade Utility** and the **BlendMod Utility**, are vital components of the mine information system, fundamentally linked to ensuring **Data Integrity** and optimizing production outcomes. These functionalities translate geological and quality data into operational constraints that drive the truck assignment algorithms.
 
@@ -3970,7 +3970,7 @@ The accurate setup and maintenance of Grades and Blending constraints are paramo
 
 --------------------------------------------------------------------------------
 
-Mining Material Management: Grades and Blending Utilities
+## Mining Material Management: Grades and Blending Utilities
 
 The combination of the **Grade Utility** and **BlendMod Utility** provides the foundational framework within mine management systems (like DISPATCH and Jmineops) for managing the material quality and composition, which is critical for **Data Integrity** and optimizing operations. These components ensure that the material mined and processed aligns with specific production and quality requirements.
 
@@ -4024,7 +4024,7 @@ In essence, Grade & Blending information is integral to the entire operational m
 
 --------------------------------------------------------------------------------
 
-Mine Material Quality: Grades and Blending Utilities
+## Mine Material Quality: Grades and Blending Utilities
 
 The sources establish that **Grade & Blending** capabilities, managed through tools like the **Grade Utility** and **BlendMod Utility**, are critical components of the mine information system, directly impacting production optimization, resource allocation, and, fundamentally, **Data Integrity**. These tools define the qualitative aspects of material movement, ensuring that trucks haul the correct type and mix of material to meet processing requirements and production goals.
 
@@ -4080,7 +4080,7 @@ In summary, the utilities managing grades and blends provide the mathematical fo
 
 --------------------------------------------------------------------------------
 
-Mining Grade Utility and Data Management
+## Mining Grade Utility and Data Management
 
 The sources describe the **Grade Utility** (also referred to as Grade Editor in some instances) as the essential tool used by mining operations, typically the **Ore Control Department**, to **create and maintain records for ore and waste material grades** within the system's database. This functionality is the fundamental precursor to enabling material management and blending activities controlled by the BlendMod Utility.
 
@@ -4132,7 +4132,7 @@ In essence, the Grade Utility is where the mine establishes the dictionary and p
 
 --------------------------------------------------------------------------------
 
-BlendMod Utility: Material Blending and Quality Control
+## BlendMod Utility: Material Blending and Quality Control
 
 The **BlendMod Utility** is a critical tool within fleet management systems like DISPATCH and Jmineops, specifically designed to **control material blending at crushers and stockpiles** (referred to generally as dumping points or sinks) to meet specified quality parameters [1-3]. This utility operates within the larger framework of **Grade & Blending**, relying on accurate material definition and optimization algorithms to manage material flow [4, 5].
 
@@ -4186,7 +4186,7 @@ The configuration set in the BlendMod Utility is crucial because **blending con
 
 --------------------------------------------------------------------------------
 
-Continuous Blending Mechanisms in Mining Optimization
+## Continuous Blending Mechanisms in Mining Optimization
 
 The sources define **Continuous Blending** as a method used within the mining optimization system to manage the flow of material to processing destinations, such as crushers or stockpiles, ensuring that the material composition remains within specified quality parameters over a determined control quantity or interval [1, 2].
 
@@ -4238,7 +4238,7 @@ In contrast to **Continuous** blending, the alternative concept of **Batch Bl
 
 --------------------------------------------------------------------------------
 
-MineStar Fleet Assignment Logic and Monitoring
+## MineStar Fleet Assignment Logic and Monitoring
 
 The sources thoroughly describe **Assignment Behaviors and Monitoring** within the Cat MineStar System Fleet (including DISPATCH and Joptimiser/Jigsaw), emphasizing that accurate data, proper configuration, and continuous monitoring are critical for the system's ability to achieve production goals and minimize costs. The core goal of the assignment engine is to **maximize overall production** and **minimize cost per ton** by efficiently directing haul trucks [1-3].
 
@@ -4322,7 +4322,7 @@ Controllers are directly responsible for ensuring data integrity, especially con
 
 --------------------------------------------------------------------------------
 
-Fleet Management Scheduled Assignments and Behavior
+## Fleet Management Scheduled Assignments and Behavior
 
 Scheduled Assignments are a distinct category of assignments used in fleet management systems like DISPATCH and Joptimizer to manage truck movements, particularly for future or non-production tasks, ensuring optimized operation and facilitating shift management. These assignments are categorized into **Manual Scheduled** and **Automatic Scheduled** assignments, each playing a specific role in overall **Assignment Behaviors and Monitoring**.
 
@@ -4374,7 +4374,7 @@ If a machine is delayed due to an "assignment delay," the truck will still be fa
 
 --------------------------------------------------------------------------------
 
-Scheduled Mining Assignments Triggered by Load State
+## Scheduled Mining Assignments Triggered by Load State
 
 The sources highlight that assignments being **Triggered by Load State** are a key feature of **Scheduled Assignments**, particularly in determining the next steps for a truck after completing a major production activity, such as loading or dumping. This mechanism allows the mining system (like DISPATCH or Joptimizer) to manage transitions between productive hauling and necessary non-production activities efficiently.
 
@@ -4414,7 +4414,7 @@ Using the load state as a trigger ensures operational coherence:
 
 --------------------------------------------------------------------------------
 
-Timing Constraints in Scheduled Automatic Assignments
+## Timing Constraints in Scheduled Automatic Assignments
 
 The sources indicate that **Timing Constraints** such as **Arrive After, Required At, and Arrive Before** are essential parameters used primarily within **Scheduled Automatic Assignments** to manage and optimize non-production or future events for haul trucks. These constraints enable the Assignment Engine (Dynamic Programming/DP) to strategically route trucks to meet specific arrival targets, thereby maximizing productivity leading up to that scheduled event.
 
@@ -4462,7 +4462,7 @@ When timing constraints are violated, the assignment may fail, impacting fleet o
 
 --------------------------------------------------------------------------------
 
-Manual Circuits: Chaining Scheduled Truck Assignments
+## Manual Circuits: Chaining Scheduled Truck Assignments
 
 The sources discuss the creation of **manual circuits** through the mechanism of chaining **Scheduled Manual Assignments** in a sequence. This approach is positioned within the broader context of both manual and automatic assignment control, offering dispatchers fine-grained control over specific movements when automatic optimization is insufficient or undesirable.
 
@@ -4502,7 +4502,7 @@ Manual circuits and scheduled assignments, overall, ensure that critical non-pro
 
 --------------------------------------------------------------------------------
 
-Haul Truck Cycle Statuses and Fleet Optimization
+## Haul Truck Cycle Statuses and Fleet Optimization
 
 The concept of **Truck Haul Cycle Statuses** is central to the operation of dynamic fleet management and optimization systems like DISPATCH and Jmineops/Joptimizer. These statuses define the sequence of activities a truck undergoes between hauling a load and dumping it, providing the fundamental real-time data needed for accurate **Assignment Behaviors and Monitoring** to maximize productivity and minimize costs [1-7].
 
@@ -4564,7 +4564,7 @@ The accurate measurement of these haul cycle statuses is the backbone of the sys
 
 --------------------------------------------------------------------------------
 
-Haul Cycle Dynamics: Traveling Empty Phase
+## Haul Cycle Dynamics: Traveling Empty Phase
 
 The sources clearly define **Traveling Empty** as the initial, critical phase of the truck production cycle following the dumping activity, where the empty truck proceeds toward a loading unit to receive its next load.
 
@@ -4610,7 +4610,7 @@ In essence, the accuracy of the Traveling Empty time and path is fundamental, as
 
 --------------------------------------------------------------------------------
 
-Truck Haul Cycle: Arriving Empty Status and Triggers
+## Truck Haul Cycle: Arriving Empty Status and Triggers
 
 The event of a truck **"Arriving Empty"** is a crucial segment within the overall **Truck Haul Cycle Statuses**, marking the transition from road travel to the stationary activities associated with loading. This status change is triggered specifically when the empty truck reaches a pre-defined point near its assigned destination (typically a loading unit).
 
@@ -4644,7 +4644,7 @@ Accurate completion of the "Arriving Empty" status is essential for accurate dat
 
 --------------------------------------------------------------------------------
 
-Defining Mine Truck Loading Activity and Triggers
+## Defining Mine Truck Loading Activity and Triggers
 
 The sources provide a precise definition of the **Loading** activity within the **Truck Haul Cycle Statuses** for mine management systems like DISPATCH and Jigsaw/Joptimiser, detailing how this key productive activity is triggered, measured, and monitored.
 
@@ -4686,7 +4686,7 @@ The Loading activity is a crucial measured component in the overall haul cycle, 
 
 --------------------------------------------------------------------------------
 
-Truck Haul Cycle Queuing Definition and Measurement
+## Truck Haul Cycle Queuing Definition and Measurement
 
 The sources define **Queuing** as a specific non-productive activity that occurs during a truck's haul cycle, typically triggered when a truck slows down to a very low speed near a destination,.
 
@@ -4728,7 +4728,7 @@ The duration of the queuing activity at the dump is specifically defined to end 
 
 --------------------------------------------------------------------------------
 
-Truck Haul Cycle: Definition and Analysis of Spotting
+## Truck Haul Cycle: Definition and Analysis of Spotting
 
 The sources define **Spotting** as a specific and critical activity within the larger context of a truck's **Haul Cycle Statuses** in a dynamic fleet management system like DISPATCH or Jigsaw/Jmineops. Spotting refers to the time period when a truck is actively positioning itself to receive a load or dump its material.
 
@@ -4774,7 +4774,7 @@ Ultimately, the accuracy of recorded spotting data is paramount for maintaining�
 
 --------------------------------------------------------------------------------
 
-Mine Fleet Management: Availability and Assignability
+## Mine Fleet Management: Availability and Assignability
 
 The sources define **Availability & Assignability** as paramount concepts in mine fleet management, crucial for effective **Assignment Behaviors and Monitoring** within systems like DISPATCH and Joptimizer. These concepts determine whether machines are ready to perform work and whether the optimization engine is permitted to include them in automatic assignments.
 
@@ -4816,7 +4816,7 @@ In essence, Assignment Behaviors and Monitoring are deeply intertwined with the 
 
 --------------------------------------------------------------------------------
 
-Mine Control Availability and Assignability Procedures
+## Mine Control Availability and Assignability Procedures
 
 The process of **Checking Availability** is a fundamental task for Mine Controllers at the start of a shift or throughout operations to ensure that equipment is ready and configured to receive assignments within the overall optimization strategy of the DISPATCH/Joptimizer system (referred to generally as **Availability & Assignability**), [1], [2].
 
@@ -4870,7 +4870,7 @@ For instance, at shift start, Controllers must ensure that equipment not schedul
 
 --------------------------------------------------------------------------------
 
-Controlling Loading Tool Assignability in Mine Optimization
+## Controlling Loading Tool Assignability in Mine Optimization
 
 The action of changing a machine from being **Assignable** (typically by unchecking the 'assignable checkbox') is a direct operational control exercised by the Mine Controller to temporarily halt the automatic assignment of trucks to that specific loading tool. This action is crucial within the broader context of maintaining **Availability & Assignability** in the optimization system.
 
@@ -4908,7 +4908,7 @@ In summary, changing a machine from assignable via the checkbox gives the Mine C
 
 --------------------------------------------------------------------------------
 
-Loading Tool Disablement and Truck Reassignment Control
+## Loading Tool Disablement and Truck Reassignment Control
 
 The sources discuss the options related to reassigning trucks that are currently **On Route** or **In Queue** at a loading tool when that loading tool is deliberately being made unassignable (disabled). These settings are crucial components of the Assignment Behavior controls, which dictate how the Dynamic Assignment (DA) layer of the optimization system manages trucks when a key piece of loading equipment suddenly becomes unavailable.
 
@@ -4942,7 +4942,7 @@ When a loading tool is deemed unassignable, the DA layer adjusts its real-time a
 
 --------------------------------------------------------------------------------
 
-Dynamic Assignment Reassignment Waypoints and Strategy
+## Dynamic Assignment Reassignment Waypoints and Strategy
 
 Reassignment Waypoints (or Reassignment Callpoints) are fundamental to the effectiveness of **Dynamic Assignment (DA)** behavior in the DISPATCH/Joptimizer system, particularly for monitoring and adjusting the movement of trucks when traveling empty to a loading unit [1, 2].
 
@@ -4988,7 +4988,7 @@ If the conditions warrant a reassignment, the system ensures the new assignment 
 
 --------------------------------------------------------------------------------
 
-Reassignment Waypoints: Mining Optimization Triggers
+## Reassignment Waypoints: Mining Optimization Triggers
 
 The sources clearly define the primary function of a **Reassignment Waypoint** as a mechanism designed to **trigger a reassignment request to the office** software (DISPATCH/Joptimizer) for a truck traveling along a haul path. This trigger initiates a system-wide evaluation to ensure the truck's current assignment remains optimal given real-time mine conditions.
 
@@ -5024,7 +5024,7 @@ Given that the purpose of the trigger is to potentially change the truck's desti
 
 --------------------------------------------------------------------------------
 
-Dynamic Truck Reassignment Based on Load Status
+## Dynamic Truck Reassignment Based on Load Status
 
 The concept of **Reassignment Waypoints** being triggered specifically when a truck is **Loaded or Empty** is central to how the DISPATCH/MineStar optimization system dynamically manages assignments in real-time. This functionality ensures that the system checks for a more optimal path or destination precisely when the truck's operational state is about to change or has recently changed, thus maximizing efficiency and addressing changing mine conditions.
 
@@ -5058,7 +5058,7 @@ In summary, configuring Reassignment Waypoints to trigger based on the truck's 
 
 --------------------------------------------------------------------------------
 
-Visual Best Practice for Dynamic Reassignment Waypoints
+## Visual Best Practice for Dynamic Reassignment Waypoints
 
 The sources explicitly recommend a **best practice** concerning the display of **Reassignment Waypoints** to enhance operator awareness within the DISPATCH (or MineStar/Jigsaw) system.
 
@@ -5090,7 +5090,7 @@ If a truck operator needs time to notice the reassignment and make the correct t
 
 --------------------------------------------------------------------------------
 
-Trucking Indication Page for Assignment Monitoring
+## Trucking Indication Page for Assignment Monitoring
 
 The **Trucking Indication (TI) Page** (also known as the Trucking Indicator) is a core component of the DISPATCH/Joptimiser interface, fundamentally serving as a real-time decision support and monitoring tool that validates the ongoing performance of the optimization algorithms [1], [2], [3]. Its primary purpose within the context of **Assignment Behaviors and Monitoring** is to enable Mine Controllers and Supervisors to **optimize truck allocation** to loading tools, thereby improving production outcomes and reducing costs [2].
 
@@ -5140,7 +5140,7 @@ In essence, the TI Page provides a critical, graphical summary of the complex ma
 
 --------------------------------------------------------------------------------
 
-Trucking Indication Page: Optimization and Cost Reduction
+## Trucking Indication Page: Optimization and Cost Reduction
 
 The sources emphasize that the **Trucking Indication (TI) Page** is a crucial interface tool designed explicitly for the purpose of helping mine personnel, particularly Controllers and Supervisors, **optimize truck allocation to improve production outcomes and reduce costs** in the mining operation.
 
@@ -5180,7 +5180,7 @@ By synthesizing optimization results and presenting them visually (often using t
 
 --------------------------------------------------------------------------------
 
-Computed Max in Mine Haulage Optimization
+## Computed Max in Mine Haulage Optimization
 
 The **Computed Max** is a fundamental metric displayed on the **Trucking Indication (TI) Page** (or Trucking Indicator page) that provides the theoretical upper limit on the haulage resources required for a specific production path within the mine [1, 2]. It is designed to inform the Mine Controller about the point at which increasing the number of trucks servicing a particular area will lead to diminishing returns in production, specifically resulting in increased queue time at the loading tool [1].
 
@@ -5212,7 +5212,7 @@ The goal of Joptimizer is to maximize the utilization of active equipment while 
 
 --------------------------------------------------------------------------------
 
-Optimizing Trucking: The Current Target Metric
+## Optimizing Trucking: The Current Target Metric
 
 The **Current Target**, often labeled as "Current(Target)", is a key performance metric displayed on the **Trucking Indication (TI) Page** (or Trucking Indicator page) within the DISPATCH/Joptimizer system. It represents the number of trucks required by the system's optimization model to achieve the current shift's production plan targets for a specific production arc (loading tool, processor, and material combination),, [1].
 
@@ -5250,7 +5250,7 @@ In summary, the **Current Target** on the TI Page is the operational mandate d
 
 --------------------------------------------------------------------------------
 
-Trucking Indication and Associated Haulage Metric
+## Trucking Indication and Associated Haulage Metric
 
 The term **"Associated"** refers to a critical metric displayed on the **Trucking Indication (TI) Page** (or Trucking Indicator page in the DISPATCH/Joptimiser system) that represents the haulage resources currently dedicated to a specific production path involving a loading tool or processor. This metric is essential for assessing the operational balance of the fleet.
 
@@ -5298,7 +5298,7 @@ In summary, the **Associated** metric is a real-time count of trucks physicall
 
 --------------------------------------------------------------------------------
 
-Trucking Indication Page Color Key Diagnostics
+## Trucking Indication Page Color Key Diagnostics
 
 The sources describe the **Color Key** as an integral visual aid found at the bottom of the **Trucking Indication (TI) Page** (or Trucking Indicator page in DISPATCH) which immediately communicates the status of truck coverage relative to the required production capacity of the loading units [1], [2].
 
@@ -5344,7 +5344,7 @@ In summary, the Color Key is a highly visible, real-time diagnostic tool within 
 
 --------------------------------------------------------------------------------
 
-Trucking Indication Page Inaccuracy Causes and Resolution
+## Trucking Indication Page Inaccuracy Causes and Resolution
 
 The **Trucking Indication (TI) Page** is a crucial decision support tool that allows users, including Controllers, Supervisors, and Site Champions, to monitor the required quantity of trucks relative to the available loading units and optimize truck allocation to maximize production and reduce costs [1], [2], [3]. The data displayed on the TI page is designed to reflect the optimal allocation calculated by the Linear Programming (LP) layer of the DISPATCH/Joptimizer system [3], [4].
 
@@ -5380,7 +5380,7 @@ If any of these issues persist, the responsible personnel (Controllers/Builders)
 
 --------------------------------------------------------------------------------
 
-DISPATCH Cat MineStar System Utilities and Operations
+## DISPATCH Cat MineStar System Utilities and Operations
 
 The sources provide a rich and highly detailed perspective on the **System Utilities and Interface (DISPATCH)**, emphasizing their collective role in achieving optimal **Cat MineStar System Fleet / DISPATCH Operations & Assignments**. The interface components are the mechanisms through which mine controllers and builders interact with the underlying complex optimization algorithms (Best Path (BP), Linear Programming (LP), and Dynamic Programming (DP)) to ensure efficiency, data integrity, and compliance with the mine plan.
 
@@ -5434,7 +5434,7 @@ In the overarching context of operations and assignments, these components and u
 
 --------------------------------------------------------------------------------
 
-DISPATCH Mine Operations User Interface Components
+## DISPATCH Mine Operations User Interface Components
 
 The DISPATCH (or MineStar/IntelliMine/Jmineops) system relies on a set of tightly integrated **User Interface (UI) Components** to allow Mine Controllers and administrators to monitor, control, configure, and troubleshoot the complex, dynamic haulage operation. These components serve as the primary access points for the system's core functionalities and utilities.
 
@@ -5502,7 +5502,7 @@ These UI components integrate closely with various specialized **System Utiliti
 
 --------------------------------------------------------------------------------
 
-DISPATCH System Control Panel Functions and Components
+## DISPATCH System Control Panel Functions and Components
 
 The **Control Panel** is identified as a **main component of the DISPATCH (or IntelliMine NextGen/Jmineops) user interface**, serving as the primary launchpad for key system applications and utilities for Mine Controllers.
 
@@ -5532,7 +5532,7 @@ The Control Panel itself is typically started by clicking the **IntelliMine sho
 
 --------------------------------------------------------------------------------
 
-MineView: DISPATCH System Monitoring and Control Hub
+## MineView: DISPATCH System Monitoring and Control Hub
 
 The **MineView Application** is a central and indispensable user interface (UI) component in the DISPATCH/Jigsaw system, designed to provide real-time graphical displays, diagnostics, and management tools necessary for monitoring and controlling the haulage operation [1], [2], [3], [4], [5], [6], [7].
 
@@ -5594,7 +5594,7 @@ Both perspectives utilize status colors (e.g., Green for Ready, Yellow for Delay
 
 --------------------------------------------------------------------------------
 
-The DISPATCH FormView Utility Window
+## The DISPATCH FormView Utility Window
 
 The **FormView Window** is a fundamental user interface (UI) component within the DISPATCH system, serving as a launching platform and container for running various system utilities. It provides an alternative method of accessing system forms and applications outside of the primary graphical interfaces like the MineView Application and the Master Keypad [1, 2].
 
@@ -5640,7 +5640,7 @@ In contrast to the icon-based shortcuts offered by the Master Keypad, FormView r
 
 --------------------------------------------------------------------------------
 
-DISPATCH Exceptions Window: Real-Time Operational Monitoring
+## DISPATCH Exceptions Window: Real-Time Operational Monitoring
 
 The **Exceptions Window** (also referred to as the **Exception Screen** or the **Inbox** in related systems like Jmineops) is a critical, high-priority user interface component within the DISPATCH system, specifically designed to monitor unexpected or exceptional conditions that occur during the haulage cycle [1], [2], [3], [4].
 
@@ -5688,7 +5688,7 @@ Controllers are also responsible for correcting historical data that initially a
 
 --------------------------------------------------------------------------------
 
-DISPATCH Master Keypad: Interface and Utility Access
+## DISPATCH Master Keypad: Interface and Utility Access
 
 The **DISPATCH Master Keypad** is identified as a critical component of the DISPATCH (or MineStar/Jmineops) user interface, functioning as a centralized launchpad that provides Mine Controllers and other users **quick and easy access to the extensive suite of system utilities** [1-3].
 
@@ -5714,7 +5714,7 @@ In summary, the DISPATCH Master Keypad is a key feature of the user interface th
 
 --------------------------------------------------------------------------------
 
-DISPATCH System Report Manager and Reporting Functions
+## DISPATCH System Report Manager and Reporting Functions
 
 The sources explicitly identify the **Report Manager** as a dedicated component of the overall user interface within the DISPATCH system, designed specifically for generating and accessing production-related reports. Its primary function ties directly into the system's larger mandate of monitoring and analyzing mining efficiency.
 
@@ -5752,7 +5752,7 @@ In essence, the **Report Manager** translates the raw, complex data stored in 
 
 --------------------------------------------------------------------------------
 
-DISPATCH Mine Haulage System Key Utilities
+## DISPATCH Mine Haulage System Key Utilities
 
 The sources and our conversation history detail a wide range of **Key Utilities** that form the operational backbone of the DISPATCH system interface, enabling mine controllers and builders to manage, configure, troubleshoot, and optimize the haulage operation using real-time data and sophisticated algorithms. These utilities are critical components that ensure the accuracy of the mine model and the efficiency of equipment assignments.
 
@@ -5802,7 +5802,7 @@ These key utilities are interdependent, collectively processing the vast amount 
 
 --------------------------------------------------------------------------------
 
-DISPATCH System Control Utility: Function and Role
+## DISPATCH System Control Utility: Function and Role
 
 The **Dispatch Utility** (form name: `dispatch` or `dispatch.frm`) is a pivotal, multi-functional tool within the DISPATCH system, primarily offering **broad control** over the mining operation, extensive real-time data display, and the ability to execute **manual assignments** and simulated **field computer actions** on behalf of operators. It is classified as a core component of the system's utilities, particularly those used during shift operation and troubleshooting.
 
@@ -5852,7 +5852,7 @@ The use of the Dispatch Utility is integral to several crucial dispatcher workfl
 
 --------------------------------------------------------------------------------
 
-DISPATCH Shovel Need Utility and Truck Requirements
+## DISPATCH Shovel Need Utility and Truck Requirements
 
 The sources identify the **Shovel Need Utility** as a critical diagnostic and operational tool within the DISPATCH system, primarily dedicated to calculating and displaying the current truck requirements for the shovel fleet. This function is essential for dynamically balancing the haulage operation.
 
@@ -5892,7 +5892,7 @@ The accuracy of the truck requirement figures helps the Controller manage the fl
 
 --------------------------------------------------------------------------------
 
-DISPATCH Reasons Utility: Status Code Management
+## DISPATCH Reasons Utility: Status Code Management
 
 The **Reasons Utility** is a dedicated administrative tool within the DISPATCH system used to **display, create, renumber, change, and delete reason codes** associated with changes in equipment status [1, 2]. This utility is foundational to data integrity and reporting, particularly concerning non-productive time for operational equipment.
 
@@ -5936,7 +5936,7 @@ In essence, the Reasons Utility acts as the rulebook for defining the context of
 
 --------------------------------------------------------------------------------
 
-DISPATCH Tiedown and Parkup Utility Management
+## DISPATCH Tiedown and Parkup Utility Management
 
 The sources define the **Tiedown Utility** (also referred to synonymously as the **Parkup Utility**) as a critical interface for managing end-of-shift operations, and position it within the broader context of essential Dispatch system tools, specifically under the categorization of key utilities and modules related to shift change and location management.
 
@@ -5978,7 +5978,7 @@ The utility also allows defining how the time spent in shift change affects main
 
 --------------------------------------------------------------------------------
 
-Prestart Utility: Equipment Safety Checklist Management
+## Prestart Utility: Equipment Safety Checklist Management
 
 The sources describe the **Prestart Utility** and its associated **Prestart Module** as a specialized safety and operational tool used to manage checklists that operators must complete during the equipment logon process, functioning as a key utility within the larger system.
 
@@ -6030,7 +6030,7 @@ It directly supports the core **Shift Startup** process by ensuring safety and
 
 --------------------------------------------------------------------------------
 
-Mine GPS Utility and Spatial Data Management
+## Mine GPS Utility and Spatial Data Management
 
 The sources detail the **GPS Utility** as a specialized tool within the overall system utility suite, primarily focused on the management, configuration, and diagnostics related to the Global Positioning System (GPS) infrastructure and location tracking in the mine.
 
@@ -6113,7 +6113,7 @@ In summary, equipment statuses are the foundation upon which real-time operation
 
 --------------------------------------------------------------------------------
 
-Defining the Ready Status in Mine Optimization
+## Defining the Ready Status in Mine Optimization
 
 The sources consistently define **Ready** as the fundamental and most desirable operational status for equipment and facilities, signifying immediate availability for use and confirming its inclusion in the crucial optimization and assignment calculations performed by the system.
 
@@ -6189,7 +6189,7 @@ Proper management of the Down status is largely the responsibility of the operat
 
 --------------------------------------------------------------------------------
 
-Mine Equipment Delay Status and Optimization
+## Mine Equipment Delay Status and Optimization
 
 The sources provide extensive detail on the **Delay** status, defining it as a crucial component of equipment operational status, primarily used for tracking scheduled or unscheduled interruptions to productive work, such as blasting, operator breaks, and movement.
 
@@ -6233,7 +6233,7 @@ The accuracy of delay records is paramount for production metrics (KPIs) and pla
 
 --------------------------------------------------------------------------------
 
-Standby Status in Mine Operational Systems
+## Standby Status in Mine Operational Systems
 
 The sources consistently define **Standby** as a critical operational status for equipment, primarily denoting lack of work or operator availability, and emphasize that equipment in this status is generally excluded from optimization and assignment calculations.
 
@@ -6273,7 +6273,7 @@ In summary, the **Standby** status is crucial for managing operational time be
 
 --------------------------------------------------------------------------------
 
-Shiftchange and Equipment Operational Status Management
+## Shiftchange and Equipment Operational Status Management
 
 The sources provide a comprehensive overview of **Shiftchange**, viewing it synonymously with **Tiedown** and **Parkup**, and highlighting its crucial role in managing equipment status, particularly in anticipation of late logons [1-3].
 
