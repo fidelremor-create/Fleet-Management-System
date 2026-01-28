@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <style>.title{font:bold 18px sans-serif;} .box{fill:#fff7e6;stroke:#d98c00;stroke-width:2;} .small{font:14px sans-serif;}</style>
+  <text x="20" y="30" class="title">Modular FMS — BP / LP / DP Layered Flow</text>
+  <rect x="50" y="60" width="330" height="80" class="box" rx="8"/>
+  <text x="70" y="110" class="small">Best Path (BP)\nRoad Network & Travel Times</text>
+  <rect x="430" y="60" width="330" height="80" class="box" rx="8"/>
+  <text x="460" y="110" class="small">Linear Programming (LP)\nProduction Plan & Targets</text>
+  <rect x="810" y="60" width="330" height="80" class="box" rx="8"/>
+  <text x="830" y="110" class="small">Dynamic Programming (DP)\nReal-time Assignments</text>
+
+  <line x1="380" y1="100" x2="430" y2="100" stroke="#d98c00" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="760" y1="100" x2="810" y2="100" stroke="#d98c00" stroke-width="3" marker-end="url(#arr)"/>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d98c00" />
+    </marker>
+  </defs>
+
+  <text x="20" y="320" class="small">BP supplies travel times to LP; LP outputs targets to DP; DP executes assignments and feeds telemetry back to BP/LP.</text>
+</svg>
